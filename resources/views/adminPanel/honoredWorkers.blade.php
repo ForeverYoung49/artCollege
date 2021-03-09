@@ -10,7 +10,7 @@
                 <p class="text-center">Просмотр всех заслуженных работников культуры, их редактирование, удаление и добавление</p>
             </div>
             <div class="row projects">
-                <table style="widht: 100%">
+                <table>
                     <div class="container-fluid d-flex justify-content-end">
                         <div title="Добавить нового директора" colspan="3" data-toggle="collapse" href="#addWorkers" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-align: right">
                             <span class="btn btn-success">Добавить</span>
@@ -30,7 +30,7 @@
                             <td>
                                 <textarea name="description" id="description" style="width: 100%;" required></textarea>
                             </td>
-                            <td>
+                            <td class="buttons">
                                 <button type="submit" class="btn btn-success">
                                     <i class="fas fa-plus"></i>
                                 </button>
@@ -41,7 +41,7 @@
                     <tr>
                         <td>{{ $h->name }}</td>
                         <td>{{ $h->description }}</td>
-                        <td>
+                        <td class="buttons">
                             <form action="/ap/delete_honored_workers" method="post">
                             @csrf
                                 <input type="text" name="id" id="id" value="{{ $h->id }}" hidden>
@@ -67,7 +67,7 @@
                             <td>
                                 <textarea name="description" id="description" style="width: 100%; min-height:100px;" required>{{$h->description}}</textarea>
                             </td>
-                            <td>
+                            <td class="buttons">
                                 <button type="submit" class="btn btn-success">
                                     <i class="fas fa-check"></i>
                                 </button>

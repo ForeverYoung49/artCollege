@@ -10,7 +10,7 @@
                 <p class="text-center">Просмотр всех событий, их редактирование, удаление и добавление</p>
             </div>
             <div class="row projects">
-                <table style="widht: 100%">
+                <table>
                     <div class="container-fluid d-flex justify-content-end">
                         <div title="Добавить нового преподавателя" colspan="3" data-toggle="collapse" href="#addEvent" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-align: right">
                             <span class="btn btn-success">Добавить</span>
@@ -41,7 +41,7 @@
                     <tr>
                         <td>{{ $e->year }}</td>
                         <td>{!! html_entity_decode(nl2br(e($e->description))) !!}</td>
-                        <td>
+                        <td class="buttons">
                             <form action="/ap/delete_events" method="post">
                             @csrf
                                 <input type="text" name="id" id="id" value="{{ $e->id }}" hidden>

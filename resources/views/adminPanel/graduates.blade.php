@@ -10,7 +10,7 @@
                 <p class="text-center">Просмотр всех выпускников, их редактирование, удаление и добавление</p>
             </div>
             <div class="row projects">
-                <table style="width: 100%">
+                <table>
                     <div class="container-fluid d-flex justify-content-end">
                         <div title="Добавить новое отделение" data-toggle="collapse" href="#addGrad" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-align: right">
                             <span class="btn btn-success">Добавить</span>
@@ -46,7 +46,7 @@
                             <td>
                                 <textarea name="name" id="name" style="width: 100%" required></textarea>
                             </td>
-                            <td>
+                            <td class="buttons">
                                 <button type="submit" class="btn btn-success">
                                     <i class="fas fa-plus"></i>
                                 </button>
@@ -59,7 +59,7 @@
                         <td>{{ $g->dep_title }}</td>
                         <td>{{ $g->spec_title }}</td>
                         <td>{{ $g->name }}</td>
-                        <td>
+                        <td class="buttons">
                             <form action="/ap/delete_graduates" method="post">
                             @csrf
                                 <input type="text" name="id" id="id" value="{{ $g->id }}" hidden>
@@ -100,7 +100,7 @@
                                 <input type="text" name="id" id="id" value="{{ $g->id }}" hidden>
                                 <textarea name="name"  id="name" style="width: 100%" required>{{$g->name}}</textarea>
                             </td>
-                            <td>
+                            <td class="buttons">
                                 <button type="submit" class="btn btn-success">
                                     <i class="fas fa-check"></i>
                                 </button>

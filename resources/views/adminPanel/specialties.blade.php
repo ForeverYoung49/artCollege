@@ -10,7 +10,7 @@
                 <p class="text-center">Просмотр всех специальностей, их редактирование, удаление и добавление</p>
             </div>
             <div class="row projects">
-                <table style="width: 100%">
+                <table>
                     <div class="container-fluid d-flex justify-content-end">
                         <div title="Добавить новое отделение" data-toggle="collapse" href="#addSpec" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-align: right">
                             <span class="btn btn-success">Добавить</span>
@@ -33,7 +33,7 @@
                             <td>
                                 <textarea name="title" id="title" style="width: 100%" required></textarea>
                             </td>
-                            <td>
+                            <td class="buttons">
                                 <button type="submit" class="btn btn-success">
                                     <i class="fas fa-plus"></i>
                                 </button>
@@ -44,7 +44,7 @@
                     <tr>
                         <td>{{ $s->dep_title }}</td>
                         <td>{{ $s->title }}</td>
-                        <td>
+                        <td class="buttons">
                             <form action="/ap/delete_specialties" method="post">
                             @csrf
                                 <input type="text" name="id" id="id" value="{{ $s->id }}" hidden>
@@ -74,7 +74,7 @@
                                 <input type="text" name="id" id="id" value="{{ $s->id }}" hidden>
                                 <textarea name="title"  id="title" style="width: 100%" required>{{$s->title}}</textarea>
                             </td>
-                            <td>
+                            <td class="buttons">
                                 <button type="submit" class="btn btn-success">
                                     <i class="fas fa-check"></i>
                                 </button>

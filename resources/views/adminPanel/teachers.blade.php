@@ -34,7 +34,7 @@
                             <td>
                                 <textarea name="description" id="description" style="width: 100%;" required></textarea>
                             </td>
-                            <td>
+                            <td class="buttons">
                                 <button type="submit" class="btn btn-success">
                                     <i class="fas fa-plus"></i>
                                 </button>
@@ -46,7 +46,7 @@
                         <td><img src="/assets/img/teachers/{{ $t->image }}" width="200" alt=""></td>
                         <td>{{ $t->name }}</td>
                         <td>{{ $t->description }}</td>
-                        <td>
+                        <td class="buttons">
                             <form action="/ap/delete_teacher" method="post">
                             @csrf
                                 <input type="text" name="id" id="id" value="{{ $t->id }}" hidden>
@@ -75,7 +75,7 @@
                             <td>
                                 <textarea name="description" id="description" style="width: 100%; min-height:100px;" required>{{$t->description}}</textarea>
                             </td>
-                            <td>
+                            <td class="buttons">
                                 <button type="submit" class="btn btn-success">
                                     <i class="fas fa-check"></i>
                                 </button>

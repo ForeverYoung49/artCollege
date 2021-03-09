@@ -10,6 +10,9 @@ th {
     padding: 10px;
     text-align: center;
 }
+.buttons {
+    width: 40px;
+}
 table {
     width: 100%;
 }
