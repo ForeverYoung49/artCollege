@@ -158,7 +158,6 @@ class adminPanel extends Controller
     }
 
     public function addEvent(Request $request){
-        dd($request);
         Events::create([
             'year' => $request->year,
             'description' => $request->description            

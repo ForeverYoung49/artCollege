@@ -10,7 +10,7 @@
                 <p class="text-center">Просмотр всех событий, их редактирование, удаление и добавление</p>
             </div>
             <div class="row projects">
-                <table>
+                <table style="widht: 100%">
                     <div class="container-fluid d-flex justify-content-end">
                         <div title="Добавить нового преподавателя" colspan="3" data-toggle="collapse" href="#addEvent" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-align: right">
                             <span class="btn btn-success">Добавить</span>
@@ -22,13 +22,13 @@
                         <th></th>
                     </tr>
                     <tr class="collapse" id="addEvent">
-                        <form action="/ap/add_event" method="post" novalidate>
+                        <form action="/ap/add_event" method="post">
                         @csrf
                             <td>
                                 <input type="text" name="year" id="year" size="4" required>
                             </td>
                             <td>
-                                <textarea name="description" id="description"></textarea>
+                                <textarea name="description" id="description" require></textarea>
                             </td>
                             <td>
                                 <button type="submit" class="btn btn-success">

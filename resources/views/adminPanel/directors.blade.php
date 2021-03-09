@@ -10,7 +10,7 @@
                 <p class="text-center">Просмотр всех директоров, их редактирование, удаление и добавление</p>
             </div>
             <div class="row projects">
-                <table>
+                <table style="widht: 100%">
                     <div class="container-fluid d-flex justify-content-end">
                         <div title="Добавить нового директора" colspan="3" data-toggle="collapse" href="#addDir" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-align: right">
                             <span class="btn btn-success">Добавить</span>
