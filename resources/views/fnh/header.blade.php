@@ -52,6 +52,7 @@
                         <li><a href="/ap/teachers">Почетные<br>преподаватели</a></li>
                         <li><a href="/ap/videos">Видеоархив</a></li>
                         <li><a href="/ap/honored_workers">Заслуженные<br> работники<br> культуры</a></li>
+                        <li><a href="/ap/specialties">Специальности</a></li>
                     </ul>
                     </div>
                 </li>
