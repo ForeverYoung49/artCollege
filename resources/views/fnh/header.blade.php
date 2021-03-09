@@ -53,6 +53,7 @@
                         <li><a href="/ap/videos">Видеоархив</a></li>
                         <li><a href="/ap/honored_workers">Заслуженные<br> работники<br> культуры</a></li>
                         <li><a href="/ap/specialties">Специальности</a></li>
+                        <li><a href="/ap/departaments">Отделения</a></li>
                     </ul>
                     </div>
                 </li>
