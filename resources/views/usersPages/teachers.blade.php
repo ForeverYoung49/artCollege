@@ -11,7 +11,7 @@
             </div>
             <div class="row projects">
                 @foreach($teachers as $t)
-                <div class="col-sm-6 col-lg-4 item"><img class="img-fluid" src="assets/img/teachers/{{ $t->image }}" style="height: 300px;">
+                <div class="col-sm-6 col-lg-4 item"><img class="img-fluid" src="assets/img/Teachers/{{ $t->image }}" style="height: 300px;">
                     <h3 class="name">{{ $t->name }}</h3>
                     <p class="description">{{ $t->description }}</p>
                 </div>

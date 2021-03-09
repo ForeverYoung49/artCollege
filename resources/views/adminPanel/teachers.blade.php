@@ -43,7 +43,7 @@
                     </tr>
                     @foreach($teachers as $t)
                     <tr>
-                        <td><img src="/assets/img/teachers/{{ $t->image }}" width="200" alt=""></td>
+                        <td><img src="/assets/img/Teachers/{{ $t->image }}" width="200" alt=""></td>
                         <td>{{ $t->name }}</td>
                         <td>{{ $t->description }}</td>
                         <td class="buttons">
