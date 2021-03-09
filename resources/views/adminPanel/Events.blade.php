@@ -28,7 +28,7 @@
                                 <input type="text" name="year" id="year" size="4" required>
                             </td>
                             <td>
-                                <textarea name="description" id="editor" required></textarea>
+                                <textarea name="description" id="description"></textarea>
                             </td>
                             <td>
                                 <button type="submit" class="btn btn-success">
@@ -64,7 +64,7 @@
 
     <script>
         ClassicEditor
-            .create( document.querySelector( '#editor' ) )
+            .create( document.querySelector( '#description' ) )
             .catch( error => {
                 console.error( error );
             } );
