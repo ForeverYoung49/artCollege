@@ -22,7 +22,7 @@
                         <th></th>
                     </tr>
                     <tr class="collapse" id="addEvent">
-                        <form action="/ap/add_event" method="post">
+                        <form action="/ap/add_event" method="post" novalidate>
                         @csrf
                             <td>
                                 <input type="text" name="year" id="year" size="4" required>
