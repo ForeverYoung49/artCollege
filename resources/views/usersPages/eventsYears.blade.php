@@ -12,8 +12,8 @@
         <br>
         <div class="row projects">
             @foreach($events as $e)
-            <div class="col-sm-6 col-lg-3 years item">
-            <a href="/events/{{ $e->year }}" class="">
+            <div class="col-sm-6 col-lg-3 item">
+            <a href="/events/{{ $e->year }}" class=" years">
                 <h3 class="name">
                     {{ $e->year }}
                 </h3>
