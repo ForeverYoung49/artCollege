@@ -9,6 +9,7 @@
             <h2 class="text-center">Важные события</h2>
             <p class="text-center">Важные события колледжа искусств</p>
         </div>
+        <br>
         <div class="row projects">
             @foreach($events as $e)
             <div class="col-sm-6 col-lg-3 years item">
