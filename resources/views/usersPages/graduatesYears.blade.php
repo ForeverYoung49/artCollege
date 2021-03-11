@@ -11,7 +11,7 @@
         </div>
         <div class="row projects">
             @foreach($years as $y)
-            <a href="/graduates/{{ $y->year }}" class="col-sm-6 col-lg-4 item years d-flex align-items-center" style="padding: 0;">
+            <a href="/graduates/{{ $y->year }}" class="col-sm-6 col-lg-4 item years d-flex align-items-center justify-content-center" style="padding: 0;">
                 <h3 class="name" style="margin: 20px;">
                     {{ $y->year }}
                 </h3>
