@@ -11,11 +11,11 @@
         </div>
         <div class="row projects">
             @foreach($years as $y)
-            <div class="col-sm-6 col-lg-4 item">
+            <a href="/graduates/{{ $y->year }}" class="col-sm-6 col-lg-4 item years">
                 <h3 class="name">
-                    <a href="/graduates/{{ $y->year }}">{{ $y->year }}</a>
+                    {{ $y->year }}
                 </h3>
-            </div>
+            </a>
             @endforeach
         </div>
     </div>
