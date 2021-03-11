@@ -18,7 +18,7 @@
                 </h3>
                 <br>
                 <div style="padding: 10px 40px;">
-                    {!! mb_strimwidth(html_entity_decode($e->description), 0, 70) !!}...
+                    {!! mb_strimwidth(html_entity_decode($e->description), 0, 70) !!}</strong></p></i>...
                 </div>
             </a>
             </div>
