@@ -43,12 +43,12 @@
                     @endforeach
 
                     @if($departaments[$i]->id == $specialties[$j]->departament_id and $check <> 0)
-                        <h6 class="name">{{ $specialties[$j]->title }}</h3>
+                        <h4 class="name-spec">{{ $specialties[$j]->title }}</h3>
                     @endif
 
                     @for($l=0; $l < count($graduates); $l++)
                         @if($specialties[$j]->id == $graduates[$l]->specialty_id and $departaments[$i]->id == $graduates[$l]->departament_id )
-                            <p class="description">{{ $graduates[$l]->name }}</p>
+                            <p class="name-grad">{{ $graduates[$l]->name }}</p>
                         @endif
                     @endfor
 
@@ -57,7 +57,7 @@
                 @for($l=0; $l < count($graduates); $l++)
 
                     @if($departaments[$i]->id == $graduates[$l]->departament_id and $graduates[$l]->specialty_id == null)
-                        <p class="description">{{ $graduates[$l]->name }}</p>
+                        <p class="name-grad">{{ $graduates[$l]->name }}</p>
                     @endif
 
                 @endfor
