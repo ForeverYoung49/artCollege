@@ -8,7 +8,7 @@ use App\Http\Controllers\adminPanel;
 Route::get('/', [UsersPages::class, 'index'])->name('index');
 Route::get('/directors', [UsersPages::class, 'directors'])->name('directors');
 Route::get('/teachers', [UsersPages::class, 'teachers'])->name('teachers');
-Route::get('/honoredWorkers', [UsersPages::class, 'honoredWorkers'])->name('honoredWorkers');
+Route::get('/honored_workers', [UsersPages::class, 'honoredWorkers'])->name('honoredWorkers');
 Route::get('/videos', [UsersPages::class, 'videosYears'])->name('videosYears');
 Route::get('/videos/{year}', [UsersPages::class, 'videos'])->name('videos');
 Route::get('/events', [UsersPages::class, 'eventsYears'])->name('eventsYears');

@@ -11,11 +11,13 @@
         </div>
         <div class="row projects">
             @foreach($events as $e)
-            <div class="col-sm-6 col-lg-4 item">
+            <a href="/events/{{ $e->year }}" class="col-sm-6 col-lg-4 item years">
                 <h3 class="name">
-                    <a href="/events/{{ $e->year }}">{{ $e->year }}</a>
+                    {{ $e->year }}
                 </h3>
-            </div>
+                <br>
+                <p style="padding: 10px 30px;">{!! html_entity_decode(nl2br(e(mb_strimwidth($e->description, 0, 80)))) !!}...</p>
+            </a>
             @endforeach
         </div>
     </div>

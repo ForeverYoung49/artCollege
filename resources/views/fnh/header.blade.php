@@ -25,7 +25,7 @@
                     <li><a href="/events">Важные<br> события</a></li>
                     <li><a href="/teachers">Почетные<br>преподаватели</a></li>
                     <li><a href="/videos">Видеоархив</a></li>
-                    <li><a href="/honoredWorkers">Заслуженные<br> работники<br> культуры</a></li>
+                    <li><a href="/honored_workers">Заслуженные<br> работники<br> культуры</a></li>
                 </ul>
                 </div>
             </li>

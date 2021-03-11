@@ -10,9 +10,20 @@ th {
     padding: 10px;
     text-align: center;
 }
-.buttons {
-    width: 40px;
+select, option {
+    width: 100%;
+}
+.name-spec {
+    margin-left: 20px;
+}
+.name-grad {
+    margin-left: 40px;
 }
 table {
     width: 100%;
+}
+.years {
+    background-image: url('../img/calendar.png');
+    background-size: 100% 100%;
+    min-height: 300px;
 }

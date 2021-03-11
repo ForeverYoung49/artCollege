@@ -37,6 +37,8 @@ i, span {
   background: #7386D5;
   color: #fff;
   transition: all 0.3s;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 #sidebar ul li a {

@@ -41,7 +41,7 @@ class UsersPages extends Controller
     
     //события годы
     public function eventsYears(){ 
-        $events = Events::select('year')->groupBy('year')->get();
+        $events = Events::all();
         return view('usersPages.eventsYears',['events'=>$events]);
     }
 

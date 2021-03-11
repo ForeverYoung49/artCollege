@@ -79,7 +79,7 @@
                         <form action="/ap/edit_graduates" method="post">
                         @csrf
                             <td>
-                                <input type="text" name="year" id="year" value="{{ $g->year }}">
+                                <input type="text" name="year" size="4" id="year" value="{{ $g->year }}">
                             </td>
                             <td>
                                 <select name="dep_id" id="dep_id" required>
