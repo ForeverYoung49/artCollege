@@ -8,6 +8,10 @@
     min-height: 200px;
     border: 2px solid black;
 }
+.years:hover {
+    background-color: beige;
+    transition: 2s;
+}
 td {
     padding: 10px;
     border: 1px solid black;
