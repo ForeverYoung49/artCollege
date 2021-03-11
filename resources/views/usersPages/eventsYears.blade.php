@@ -16,9 +16,9 @@
                     {{ $e->year }}
                 </h3>
                 <br>
-                <p style="padding: 10px 40px;">
+                <div style="padding: 10px 40px;">
                     {!! html_entity_decode(mb_strimwidth($e->description, 0, 70)) !!}...
-                </p>
+                </div>
             </a>
             @endforeach
         </div>
