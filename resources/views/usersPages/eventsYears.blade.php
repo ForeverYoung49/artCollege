@@ -12,8 +12,8 @@
         <br>
         <div class="row projects">
             @foreach($events as $e)
-            <div class="col-sm-6 col-lg-3 item">
-            <a href="/events/{{ $e->year }}" class=" years">
+            <a href="/events/{{ $e->year }}" class="col-sm-6 col-lg-3 years item">
+            
                 <h3 class="name">
                     {{ $e->year }}
                 </h3>
@@ -22,7 +22,7 @@
                     {!! mb_strimwidth(html_entity_decode($e->description), 0, 70) !!}...</strong></p></i></h1></h2></h3>
                 </div>
             </a>
-            </div>
+            
             @endforeach
         </div>
     </div>
