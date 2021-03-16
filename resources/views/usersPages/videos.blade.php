@@ -14,9 +14,9 @@
                 <div class="col-sm-12 col-lg-6 item">
                     <h3>{{ $v->description }}</h3>
                         @if(strpos($v->video, 'youtube.com') <> false)
-                            <iframe src="{{ $v->video }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe src="{{ $v->video }}" class="videos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         @else
-                            <video controls draggable="false" preload="metadata" width="300">
+                            <video controls draggable="false" preload="metadata" class="videos">
                                 <source src="/assets/video/{{ $v->video }}" type='video/mp4'>
                             </video>
                         @endif                
