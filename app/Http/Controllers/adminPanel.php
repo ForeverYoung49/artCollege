@@ -10,6 +10,7 @@ use App\Models\Graduates;
 use App\Models\HonoredWorkers;
 use App\Models\Specialties;
 use App\Models\Teachers;
+use App\Models\Videos;
 
 class adminPanel extends Controller
 {
@@ -108,16 +109,16 @@ class adminPanel extends Controller
     //Раздел видео
     /////////////////////////////////////////
 
-    public function showAddVideo(){
-    	$check = '';
-    	return view('adminPanel.addVideos', compact('check'));
+    public function showVideos(){
+    	$videos = Videos::all();
+    	return view('adminPanel.videos', ['videos'=>$videos]);
     }
 
     public function addVideo(Request $request){
     	if ($request->hasFile('video')){
             $image = $request->file('video');
             $name = $request->name;
-            $name = (string)$name.'.mp4';
+            $name = (string)$name;
             $image->move(public_path().'/assets/videos',$name);
             $name = '/assets/videos'.$name;
             Videos::create([
@@ -128,12 +129,12 @@ class adminPanel extends Controller
         }
         else {
             Videos::create([
-	    		'video' => $request->video,
+	    		'video' => $request->videoYT,
 	    		'description' => $request->description,
 	    		'year' => $request->year
     		]); 
         }
-    	return redirect()->action('adminPanel@showAP');
+    	return redirect('/ap/videos');
     }
 
     /////////////////////////////////////////

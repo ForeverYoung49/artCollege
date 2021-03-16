@@ -55,6 +55,11 @@ Route::get('/ap/graduates', [adminPanel::class, 'showGraduates'])->name('showGra
 Route::post('/ap/delete_graduates', [adminPanel::class, 'deleteGraduates'])->name('deleteGraduates');
 Route::post('/ap/edit_graduates', [adminPanel::class, 'editGraduates'])->name('editGraduates');
 Route::post('/ap/add_graduates', [adminPanel::class, 'addGraduates'])->name('addGraduates');;
+//Пути видео
+Route::get('/ap/videos', [adminPanel::class, 'showVideos'])->name('showVideos');
+Route::post('/ap/delete_videos', [adminPanel::class, 'deleteVideo'])->name('deleteVideo');
+Route::post('/ap/edit_videos', [adminPanel::class, 'editVideo'])->name('editVideo');
+Route::post('/ap/add_videos', [adminPanel::class, 'addVideo'])->name('addVideo');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
