@@ -3,6 +3,7 @@
 @section('title','Панель администратора')
 
 @section('content')
+@if(Auth::user())
     <div class="projects-clean">
         <div class="container">
             <div class="intro">
@@ -87,4 +88,7 @@
             </div>
         </div>
     </div>
+@else
+    <h1>Данный раздел доступен только администратору</h1>
+@endif    
 @endsection
