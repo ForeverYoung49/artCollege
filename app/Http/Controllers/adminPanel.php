@@ -136,6 +136,28 @@ class adminPanel extends Controller
     	return redirect('/ap/videos');
     }
 
+    public function editVideo(Request $request){
+    	if ($request->hasFile('video')){
+            $image = $request->file('video');
+            $name = $request->description;
+            $name = (string)$name.'.mp4';
+            $image->move(public_path().'/assets/video',$name);
+            Videos::where('id','=',$request->id)->update(['video' => $name]);
+        }
+        else {
+            if ($request->videoYT <> null) {
+                Videos::where('id','=',$request->id)->update(['video' => $request->videoYT,]); 
+            }
+        }
+        Videos::where('id','=',$request->id)->update(['description' => $request->description,'year' => $request->year]);
+    	return redirect('/ap/videos');
+    }
+
+    public function deleteVideo(Request $request){
+        Videos::where('id','=',$request->id)->delete();
+        return redirect('/ap/videos');
+    }
+
     /////////////////////////////////////////
     //Раздел важных событий
     /////////////////////////////////////////
