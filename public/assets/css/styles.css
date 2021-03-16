@@ -1,11 +1,8 @@
-.video {
-    height: 100% !important;
-    width: 100% !important;
+.videos {
+    height: 100%;
+    width: 100%;
 }
 .years {
-    /* background-image: url('../img/calendar.png');
-    background-size: 100% 100%; */
-    
     border: 2px solid black;
     background-color: white;
     transition: 2s;
