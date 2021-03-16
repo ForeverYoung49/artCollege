@@ -50,7 +50,10 @@
                             @if(strpos($v->video, 'youtube.com') <> false)
                             <iframe src="{{ $v->video }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             @else
-                                local
+                            <video>
+                                <source src="{{ $v->video }}" type='video/mp4'>
+                            </video>
+                            <img src="assets/img/beach.jpg" alt="">
                             @endif
                         </td>
                         <td>{{ $v->description }}</td>

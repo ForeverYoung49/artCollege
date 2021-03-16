@@ -13,7 +13,12 @@
                 @foreach($videos as $v)
                 <div class="col-sm-12 col-lg-6 item">
                     <h3>{{ $v->description }}</h3>
-                    <iframe class="video" src="{{ $v->video }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        @if(strpos($v->video, 'youtube.com') <> false)
+                            <iframe src="{{ $v->video }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        @else
+                            <video src="assets/video/{{ $v->video }}">
+                            </video>
+                        @endif                
                 </div>
                 @endforeach
             </div>

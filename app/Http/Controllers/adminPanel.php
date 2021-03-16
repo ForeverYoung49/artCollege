@@ -119,7 +119,7 @@ class adminPanel extends Controller
             $image = $request->file('video');
             $name = $request->description;
             $name = (string)$name.'.mp4';
-            $image->move(public_path().'\assets\videos',$name);
+            $image->move(public_path().'/assets/video',$name);
             Videos::create([
 	    		'video' => $name,
 	    		'description' => $request->description,
