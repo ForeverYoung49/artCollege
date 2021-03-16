@@ -76,6 +76,7 @@
                         <form action="/ap/edit_videos" method="post" enctype="multipart/form-data">
                         @csrf
                             <td>
+                                <input type="text" name="id" id="id" value="{{$v->id}}" hidden>
                                 <input type="text" name="year" id="year" size="4" value="{{$v->year}}">
                             </td>
                             <td>
