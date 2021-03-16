@@ -50,7 +50,7 @@
                             @if(strpos($v->video, 'youtube.com') <> false)
                             <iframe src="{{ $v->video }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             @else
-                            <video controls draggable="false" preload="metadata">
+                            <video controls draggable="false" preload="metadata" width="300">
                                 <source src="/assets/video/{{ $v->video }}" type='video/mp4'>
                             </video>
                             @endif
