@@ -6,8 +6,8 @@
     <div class="projects-clean">
         <div class="container">
             <div class="intro">
-                <h2 class="text-center">Почетные преподаватели</h2>
-                <p class="text-center">Просмотр всех почетных преподавателей, их редактирование, удаление и добавление</p>
+                <h2 class="text-center">Видеоархив</h2>
+                <p class="text-center">Просмотр всех видео, их редактирование, удаление и добавление</p>
             </div>
             <div class="row projects">
                 <table>
