@@ -117,10 +117,9 @@ class adminPanel extends Controller
     public function addVideo(Request $request){
     	if ($request->hasFile('video')){
             $image = $request->file('video');
-            $name = $request->name;
-            $name = (string)$name;
-            $image->move(public_path().'/assets/videos',$name);
-            $name = '/assets/videos'.$name;
+            $name = $request->description;
+            $name = (string)$name.'.mp4';
+            $image->move(public_path().'\assets\videos',$name);
             Videos::create([
 	    		'video' => $name,
 	    		'description' => $request->description,
