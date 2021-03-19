@@ -214,6 +214,7 @@ class adminPanel extends Controller
     }
 
     public function addHonoredWorkers(Request $request){
+        dd($request);
         if ($request->hasFile('image')){
             $image = $request->file('image');
             $name = $request->name;
@@ -222,7 +223,7 @@ class adminPanel extends Controller
             HonoredWorkers::create([
                 'name' => $request->name,
                 'description' => $request->description,
-                'image' => $name          
+                'image' => $name
             ]);
         }
         else {
