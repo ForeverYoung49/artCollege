@@ -285,11 +285,15 @@ class adminPanel extends Controller
         $check = '';
         $departaments = Departaments::all();
         $specialties = Specialties::all();
+        $years = Graduates::select('year')
+            ->groupBy('year')
+            ->orderBy('year')
+            ->get();
         $graduates = Graduates::select('departaments.title as dep_title','specialties.title as spec_title','graduates.name','graduates.id','specialties.id as spec_id','departaments.id as dep_id','graduates.year')
             ->join('departaments','graduates.departament_id','=','departaments.id')
             ->leftJoin('specialties','graduates.specialty_id','=','specialties.id')
             ->get();
-    	return view('adminPanel.graduates', ['specialties' => $specialties, 'departaments' => $departaments, 'graduates' => $graduates]);
+    	return view('adminPanel.graduates', ['specialties' => $specialties, 'departaments' => $departaments, 'graduates' => $graduates, 'years' => $years]);
     }
 
     public function addGraduates(Request $request){

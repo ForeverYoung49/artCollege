@@ -54,7 +54,10 @@
                             </td>
                         </form>
                     </tr>
+                    @foreach($years as $y)
+                    <td colspan="5">{{ $y->year }}</td>
                     @foreach($graduates as $g)
+                    @if($g->year == $y->year)
                     <tr>
                         <td>{{ $g->year }}</td>
                         <td>{{ $g->dep_title }}</td>
@@ -108,6 +111,8 @@
                             </td>
                         </form>
                     </tr>
+                    @endif
+                    @enfdoreach
                     @endforeach
                 </table>
             </div>
