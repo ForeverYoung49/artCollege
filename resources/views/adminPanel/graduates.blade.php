@@ -112,7 +112,7 @@
                         </form>
                     </tr>
                     @endif
-                    @enfdoreach
+                    @endforeach
                     @endforeach
                 </table>
             </div>
