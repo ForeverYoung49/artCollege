@@ -26,6 +26,9 @@
                         <form action="/ap/add_honored_workers" method="post" enctype="multipart/form-data">
                         @csrf
                             <td>
+                                <input type="file" accept="image/*" name="image" id="image">
+                            </td>
+                            <td>
                                 <input type="text" name="name" id="name" required>
                             </td>
                             <td>
@@ -40,6 +43,13 @@
                     </tr>
                     @foreach($honoredWorkers as $h)
                     <tr>
+                        <td>
+                        @if($h->image == null)
+                            Изображения нет
+                        @else
+                            {{ $h->name }}
+                        @endif
+                        </td>
                         <td>{{ $h->name }}</td>
                         <td>{{ $h->description }}</td>
                         <td class="buttons">
@@ -61,6 +71,9 @@
                     <tr class="collapse" id="editWorkers{{$h->id}}">
                         <form action="/ap/edit_honored_workers" method="post" enctype="multipart/form-data">
                         @csrf
+                            <td>
+                                <input type="file" accept="image/*" name="image" id="image">
+                            </td>
                             <td>
                                 <input type="text" name="id" id="id" value="{{ $h->id }}" hidden>
                                 <textarea name="name" id="name" required>{{$h->name}}</textarea>
