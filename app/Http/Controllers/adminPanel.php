@@ -202,6 +202,13 @@ class adminPanel extends Controller
     }
 
     public function editHonoredWorkers(Request $request){
+        if ($request->hasFile('image')){
+            $image = $request->file('image');
+            $name = $request->name;
+            $name = (string)$name.'.jpg';
+            $image->move(public_path().'/assets/img/honored_workers',$name);
+            HonoredWorkers::where('id','=',$request->id)->update(['image'=>$name]);
+        }
         HonoredWorkers::where('id','=',$request->id)->update(['name'=>$request->name, 'description'=>$request->description]);
     	return redirect('/ap/honored_workers');
     }
@@ -209,7 +216,7 @@ class adminPanel extends Controller
     public function addHonoredWorkers(Request $request){
         if ($request->hasFile('image')){
             $image = $request->file('image');
-            $name = $request->description;
+            $name = $request->name;
             $name = (string)$name.'.jpg';
             $image->move(public_path().'/assets/img/honored_workers',$name);
             HonoredWorkers::create([
