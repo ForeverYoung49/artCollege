@@ -218,7 +218,7 @@ class adminPanel extends Controller
             $image = $request->file('image');
             $name = $request->name;
             $name = (string)$name.'.jpg';
-            $image->move(public_path().'/assets/img/honored_workers',$name);
+            $image->move(public_path().'/assets/img/honoredWorkers',$name);
             HonoredWorkers::create([
                 'name' => $request->name,
                 'description' => $request->description,

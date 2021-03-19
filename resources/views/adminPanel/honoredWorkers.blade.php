@@ -48,7 +48,7 @@
                         @if($h->image == null)
                             Изображения нет
                         @else
-                            <img class="img-fluid" src="assets/img/honored_workers/{{ $h->image }}" style="height: 200px;">
+                            <img class="img-fluid" src="assets/img/honoredWorkers/{{ $h->image }}" style="height: 200px;">
                         @endif
                         </td>
                         <td>{{ $h->name }}</td>
