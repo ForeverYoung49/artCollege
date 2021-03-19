@@ -55,7 +55,7 @@
                         </form>
                     </tr>
                     @foreach($years as $y)
-                    <td colspan="5" data-toggle="collapse" href="#year{{$y->year}}" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-align: center">{{ $y->year }}</td>
+                    <td colspan="5" data-toggle="collapse" href="#year{{$y->year}}" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-align: center; font-size: 20px;">{{ $y->year }}</td>
                     @foreach($graduates as $g)
                     @if($g->year == $y->year)
                     <tr class="collapse" id="year{{$g->year}}">

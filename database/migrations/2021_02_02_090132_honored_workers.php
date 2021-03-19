@@ -15,6 +15,7 @@ class HonoredWorkers extends Migration
     {
         Schema::create('honored_workers', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
             $table->string('name');
             $table->text('description');
             $table->timestamps();
