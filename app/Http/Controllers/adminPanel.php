@@ -207,12 +207,27 @@ class adminPanel extends Controller
     }
 
     public function addHonoredWorkers(Request $request){
-        HonoredWorkers::create([
-            'name' => $request->name,
-            'description' => $request->description            
-        ]);
+        if ($request->hasFile('image')){
+            $image = $request->file('image');
+            $name = $request->description;
+            $name = (string)$name.'.jpg';
+            $image->move(public_path().'/assets/img/honored_workers',$name);
+            HonoredWorkers::create([
+                'name' => $request->name,
+                'description' => $request->description,
+                'image' => $name          
+            ]);
+        }
+        else {
+            HonoredWorkers::create([
+                'name' => $request->name,
+                'description' => $request->description,
+                'image' => null           
+            ]);
+        }
         return redirect('/ap/honored_workers');
     }
+
 
     public function deleteHonoredWorkers(Request $request){
         HonoredWorkers::where('id','=',$request->id)->delete();
