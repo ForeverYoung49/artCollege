@@ -46,7 +46,7 @@
                     <tr>
                         <td>
                         @if($h->image <> null)
-                            <img class="img-fluid" src="./assets/img/honoredWorkers/{{ $h->image }}" style="height: 200px;">
+                            <img src="/assets/img/honoredWorkers/{{ $h->image }}" width="200" alt="">
                         @else
                             Изображения нет
                         @endif
