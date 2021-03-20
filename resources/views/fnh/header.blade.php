@@ -32,7 +32,7 @@
             <li>
                 <a href="http://www.artasb.ru/">
                     <i class="fas fa-address-book"></i>
-                    Основной <br> сайт
+                    Основной сайт
                 </a>
             </li>
             
