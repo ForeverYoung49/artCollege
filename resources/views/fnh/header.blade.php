@@ -30,9 +30,9 @@
                 </div>
             </li>
             <li>
-                <a href="#">
+                <a href="http://www.artasb.ru/">
                     <i class="fas fa-address-book"></i>
-                    Контакты
+                    Основной <br> сайт
                 </a>
             </li>
             
