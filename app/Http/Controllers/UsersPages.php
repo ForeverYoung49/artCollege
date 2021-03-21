@@ -25,48 +25,48 @@ class UsersPages extends Controller
     //вывод директоров
     public function directors(){ 
         //запрос к БД
-        $directors = Directors::paginate(10);
+        $directors = Directors::all();
         return view('usersPages.directors',['directors'=>$directors]);
     }
     //вывод заслуженных работников культуры
     public function honoredWorkers(){ 
-        $honoredWorkers = HonoredWorkers::paginate(10);
+        $honoredWorkers = HonoredWorkers::all();
         return view('usersPages.honoredWorkers',['honoredWorkers'=>$honoredWorkers]);
     }
     //вывод почетных преподавателей
     public function teachers(){ 
-        $teachers = Teachers::paginate(10);
+        $teachers = Teachers::all();
         return view('usersPages.teachers',['teachers'=>$teachers]);
     }
     
     //события годы
     public function eventsYears(){ 
-        $events = Events::all();
+        $events = Events::all()->sortByDesc('year');
         return view('usersPages.eventsYears',['events'=>$events]);
     }
 
     //вывод событий
     public function events($year){ 
-        $events = Events::where('year','=',$year)->paginate(10);
+        $events = Events::where('year','=',$year)->get();
         return view('usersPages.events',['events'=>$events, 'year'=>$year]);
     }
 
     //видеоархив годы
     public function videosYears(){ 
-        $videos = Videos::select('year')->groupBy('year')->get();
+        $videos = Videos::select('year')->groupBy('year')->get()->sortByDesc('year');
         return view('usersPages.videosYears',['videos'=>$videos]);
     }
 
     //видеоархив
     public function videos($year){ 
-        $videos = Videos::where('year','=',$year)->paginate(10);
+        $videos = Videos::where('year','=',$year)->get();
         return view('usersPages.videos',['videos'=>$videos, 'year'=>$year]);
     }
 
     //вывод годов выпуска
     public function yearsGraduates(){
         //получение имеющихся годов выпуска
-        $years = Graduates::select('year')->groupBy('year')->get();
+        $years = Graduates::select('year')->groupBy('year')->get()->sortByDesc('year');
         return view('usersPages.graduatesYears',['years'=>$years]);
     }
     //вывод определенного года выпуска

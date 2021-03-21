@@ -110,7 +110,7 @@ class adminPanel extends Controller
     /////////////////////////////////////////
 
     public function showVideos(){
-    	$videos = Videos::sortBy('year')->get();
+    	$videos = Videos::get()->sortByDesc('year');
     	return view('adminPanel.videos', ['videos'=>$videos]);
     }
 
@@ -164,7 +164,7 @@ class adminPanel extends Controller
 
     public function showEvents(){
         $check = '';
-        $events = Events::sortBy('year')->get();
+        $events = Events::get()->sortByDesc('year');
     	return view('adminPanel.Events', ['events' => $events]);
     }
 
@@ -312,7 +312,7 @@ class adminPanel extends Controller
             ->groupBy('year')
             ->orderBy('year')
             ->get()
-            ->sortBy('year');
+            ->sortByDesc('year');
         $graduates = Graduates::select('departaments.title as dep_title','specialties.title as spec_title','graduates.name','graduates.id','specialties.id as spec_id','departaments.id as dep_id','graduates.year')
             ->join('departaments','graduates.departament_id','=','departaments.id')
             ->leftJoin('specialties','graduates.specialty_id','=','specialties.id')
