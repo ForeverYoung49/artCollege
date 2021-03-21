@@ -311,8 +311,8 @@ class adminPanel extends Controller
         $years = Graduates::select('year')
             ->groupBy('year')
             ->orderBy('year')
-            ->sortBy('year')
-            ->get();
+            ->get()
+            ->sortBy('year');
         $graduates = Graduates::select('departaments.title as dep_title','specialties.title as spec_title','graduates.name','graduates.id','specialties.id as spec_id','departaments.id as dep_id','graduates.year')
             ->join('departaments','graduates.departament_id','=','departaments.id')
             ->leftJoin('specialties','graduates.specialty_id','=','specialties.id')
